@@ -66,12 +66,12 @@ export const command = {
                            .setImage(photo.src.original);
          
          
-         interaction.reply({
+         await interaction.reply({
             embeds: [embed],
             ephemeral: false 
          });
       } else {
-         interaction.reply({
+         await interaction.reply({
             content: `An unexpected error ocurred during the api call in Pexels.`,
             ephemeral: true 
          });

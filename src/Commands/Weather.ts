@@ -91,19 +91,19 @@ export const command = {
                            )
                            .setFooter({text: 'Staff do servidor Jealous King.', iconURL: 'https://imgur.com/GMWIN4J.png'});
 
-            interaction.reply({
+            await interaction.reply({
                embeds: [embed],
                ephemeral: false
             })
 
          } else {
-            interaction.reply({
+            await interaction.reply({
                content: `Couldn\'t find ${cityName} in OpenWeather API.`,
                ephemeral: true
             });
          }
       } catch(err) {
-         interaction.reply({
+         await interaction.reply({
             content: 'An unexpected error ocurred during OpenWeder API call.',
             ephemeral: true
          });
