@@ -22,6 +22,22 @@ files.forEach(file => {
 	}
 });
 
+/**
+ * Access the button files
+ */
+const buttonsPath = path.join(__dirname, 'Components');
+const buttons = readdirSync(buttonsPath).filter(button => button.endsWith('.js'));
+
+buttons.forEach(buttonFile => {
+	const btnPath = path.join(buttonsPath, buttonFile);
+	const btn = require(btnPath).button;
+
+	if(btn && 'data' in btn && 'execute' in btn) {
+		bot.buttons.set(btn.data.name, btn);
+	} else {
+		console.log(`[WARNING] The button file at ${btnPath} is missing a required "data" or "execute" property.`)
+	}
+})
 
 /**
  * Accesses the event files

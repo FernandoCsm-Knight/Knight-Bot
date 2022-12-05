@@ -11,36 +11,6 @@ export const command = {
                .setName('city')
                .setDescription('Type the name of your city.')
                .setRequired(true)
-               .setChoices(
-                  {
-                     name: 'Belo Horizonte-BR',
-                     value: 'Belo Horizonte'
-                  },
-                  {
-                     name: 'Paris-FR',
-                     value: 'Paris'
-                  },
-                  {
-                     name: 'Rio de Janeiro-BR',
-                     value: 'Rio de Janeiro'
-                  },
-                  {
-                     name: 'São Paulo-BR',
-                     value: 'São Paulo'
-                  },
-                  {
-                     name: 'Tokyo-JPN',
-                     value: 'Tokyo'
-                  },
-                  {
-                     name: 'Turin-ITA',
-                     value: 'Turin'
-                  },
-                  {
-                     name: 'Washington-US',
-                     value: 'Washington'
-                  }
-               )
          )
          .toJSON(),
    async execute(interaction:CommandInteraction) {

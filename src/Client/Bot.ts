@@ -12,6 +12,7 @@ export class Bot {
    private _client:Client;
    private _rest:REST;
    private _commands:Collection<any, any>;
+   private _buttons:Collection<any, any>;
 
    public constructor(options:ClientOptions = undefined) {
       if(options == undefined) options = { 
@@ -31,6 +32,7 @@ export class Bot {
       this._keys = this._apiKeys();
 
       this._commands = new Collection<any, any>();
+      this._buttons = new Collection<any, any>();
       this._client = new Client(options);
       this._rest = new REST({ version: '10' }).setToken(this._TOKEN);
    }
@@ -57,6 +59,10 @@ export class Bot {
 
    get commands() {
       return this._commands;
+   }
+
+   get buttons() {
+      return this._buttons;
    }
 
    get keys() {
@@ -86,7 +92,7 @@ export class Bot {
 
    private _ready() {
       this.client.on('ready', () => {
-         console.log('\nHello, I\'am Alive!');
+         console.log('\nHello, I\'m Alive!');
          console.log(`Bot: ${this.client.user.tag}`);
          console.log(`Time: ${this.client.uptime} second(s)\n`);
       });

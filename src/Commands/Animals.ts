@@ -33,12 +33,20 @@ export const command = {
                   value: 'Fox'
                },
                {
+                  name: 'Koala',
+                  value: 'Koala'
+               },
+               {
                   name: 'Lion',
                   value: 'Lion'
                },
                {
                   name: 'Panda',
                   value: 'Panda'
+               },
+               {
+                  name: 'Rabbit',
+                  value: 'Rabbit'
                }
             )
       )
