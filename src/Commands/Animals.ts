@@ -6,7 +6,7 @@ export const command = {
    data: new SlashCommandBuilder()
       .setName('animals')
       .setDescription('Returns a random animal picture!')
-      .addStringOption((option) => 
+      .addStringOption(option => 
          option
             .setName('animal')
             .setDescription('Type your favorite animal.')
