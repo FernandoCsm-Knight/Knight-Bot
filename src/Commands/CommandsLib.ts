@@ -4,6 +4,7 @@ import { command as weatherCommand } from '../Commands/Weather.js';
 import { command as userInfoCommand } from '../Commands/UserInfo.js';
 import { command as suggestionCommand } from '../Commands/Suggestion.js';
 import { command as clearCommand } from '../Commands/Clear.js';
+import { command as apodCommand } from '../Commands/Apod.js';
 
 export const commands = [
    pingCommand.data,
@@ -11,5 +12,6 @@ export const commands = [
    weatherCommand.data,
    userInfoCommand.data,
    suggestionCommand.data,
-   clearCommand.data
+   clearCommand.data,
+   apodCommand.data
 ];
