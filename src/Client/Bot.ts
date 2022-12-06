@@ -72,7 +72,8 @@ export class Bot {
    private _apiKeys() {
       const obj = {
          pexels: process.env.PEXELS_API,
-         openWeather: process.env.WEATHER_API
+         openWeather: process.env.WEATHER_API,
+         nasa: process.env.NASA_API
       }
 
       Object.freeze(obj);
